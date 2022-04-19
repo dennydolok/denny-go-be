@@ -10,7 +10,6 @@ import (
 func main() {
 	config := config.InitConfig()
 	e := echo.New()
-
 	rest.RegisterUsersAPI(e, config)
 	e.Start(":8080")
 }
