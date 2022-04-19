@@ -11,5 +11,5 @@ func main() {
 	config := config.InitConfig()
 	e := echo.New()
 	rest.RegisterUsersAPI(e, config)
-	e.Start(":8080")
+	e.Start(":80")
 }
