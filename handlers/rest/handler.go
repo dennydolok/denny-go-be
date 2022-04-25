@@ -17,8 +17,8 @@ func RegisterUsersAPI(e *echo.Echo, conf config.Config) {
 	controller := controllerUser{
 		service: service,
 	}
-	userAPI := e.Group("/users")
+	userAPI := e.Group("/users", middleware.Logger())
 	userAPI.POST("/login", controller.LoginUserController)
 	userAPI.GET("", controller.GetUsersController, middleware.JWT([]byte(conf.SECRET_KEY)))
-	userAPI.POST("", controller.CreateUserController, middleware.JWT([]byte(conf.SECRET_KEY)))
+	userAPI.POST("", controller.CreateUserController)
 }

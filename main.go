@@ -11,5 +11,5 @@ func main() {
 	config := config.InitConfig()
 	e := echo.New()
 	rest.RegisterUsersAPI(e, config)
-	e.Start(":80")
+	e.Logger.Fatal(e.Start(config.SERVER_ADDRESS))
 }
