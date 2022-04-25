@@ -14,7 +14,7 @@ type Config struct {
 
 func InitConfig() Config {
 	return Config{
-		DB_USERNAME:    GetValue("DB_PASSWORD", "root"),
+		DB_USERNAME:    GetValue("DB_USERNAME", "root"),
 		DB_PASSWORD:    GetValue("DB_PASSWORD", "root"),
 		DB_PORT:        GetValue("DB_PORT", "3306"),
 		DB_NAME:        GetValue("DB_NAME", "db_be"),
