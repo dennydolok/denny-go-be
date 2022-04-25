@@ -18,7 +18,7 @@ func InitConfig() Config {
 		DB_PASSWORD:    GetValue("DB_PASSWORD", "root"),
 		DB_PORT:        GetValue("DB_PORT", "3306"),
 		DB_NAME:        GetValue("DB_NAME", "db_be"),
-		DB_HOST:        GetValue("SERVER_ADDRESS", "0.0.0.0"),
+		DB_HOST:        GetValue("DB_HOST", "0.0.0.0"),
 		SECRET_KEY:     GetValue("JWT_KEY", "secret"),
 		SERVER_ADDRESS: GetValue("SERVER_ADDRESS", "0.0.0.0:8080"),
 	}
