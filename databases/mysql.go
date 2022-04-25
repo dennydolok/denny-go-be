@@ -19,7 +19,7 @@ func InitMysql(conf config.Config) *gorm.DB {
 	)
 	DB, err := gorm.Open(mysql.Open(connection))
 	if err != nil {
-		fmt.Println("can't connect to database : ", err)
+		fmt.Println("Cannot connect to database : ", err)
 	}
 	DB.AutoMigrate(&models.User{})
 	return DB
