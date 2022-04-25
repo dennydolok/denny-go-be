@@ -2,7 +2,7 @@ name: ci and cd
 on:
   push:
     branches:
-      - "master"
+      - "main"
 jobs:
   unit-test:
     runs-on: ubuntu-latest
