@@ -46,4 +46,4 @@ jobs:
             docker stop golang
             docker container rm golang
             docker pull denny16/golang:latest
-            docker run -e DB_HOST="db-denny.c7ugyajmx0f4.us-east-1.rds.amazonaws.com" -e DB_PASSWORD="rootroot" -p 80:8080 --name golang --detach denny16/golang:latest
+            docker run -e DB_HOST=${{ secrets.HOST }} -e DB_PASSWORD=${{ secrets.KEY }} -p ${{ secrets.PORT }} --name golang --detach denny16/golang:latest
